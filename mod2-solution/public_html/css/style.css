@@ -29,7 +29,7 @@ p.content{
     padding: 25px 10px 0px 10px;
     height: 250px;
     margin: 0;
-    overflow: auto;
+    overflow: auto; 
 }
 
 p.title {
