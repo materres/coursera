@@ -64,12 +64,13 @@ body {
 }
 .container .text-box {
     background-color: papayawhip;
-    height: 1000px;
+    height: auto;
 }
 
 .container .text-content {
     font-size: 1em;
     padding: 10px;
+    text-align: justify;
 }
 
 /* END CONTENT */
