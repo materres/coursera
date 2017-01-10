@@ -1,0 +1,82 @@
+body {
+  font-size: 16px;
+  color: maroon;
+  background-color: white;
+  font-family: serif;
+  padding-bottom: 25px;
+}
+
+/** HEADER **/
+#header-nav {
+  background-color: sandybrown;
+  border-radius: 0;
+  border: 0;
+}
+
+.navbar-brand {
+  padding-top: 15px;
+}
+.navbar-brand h1 {
+  font-family: serif;
+  color: maroon;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+#collapsable-nav {
+    background-color: white;
+}
+
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  color: maroon;
+  text-align: center;
+}
+#nav-list a:hover {
+  background: white;
+  border: 2px solid maroon;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid maroon;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+/* END HEADER */
+
+/* CONTENT */
+
+.menu-title {
+    font-size: 1.5em;
+}
+
+.menu-subtitle {
+    font-size: 1.3em;
+}
+.container .text-box {
+    background-color: papayawhip;
+    height: 1000px;
+}
+
+.container .text-content {
+    font-size: 1em;
+    padding: 10px;
+}
+
+/* END CONTENT */
+
+/* MEDIA QUERIES */
+@media (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+}
