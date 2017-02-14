@@ -33,13 +33,11 @@
             if($scope.searchTerm !== "") {
                 MenuSearchService.getMatchedMenuItems($scope.searchTerm).then(function (response) {
                     narrow.found = response;
-                    console.log(narrow.found); 
                 });
             }
         };
         narrow.removeItem = function (index) {
             narrow.found.splice(index, 1);
-            console.log(narrow.found, index);
         };
     }
     
