@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  color: black;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.cat-box {
+    position: relative;
+    background-color: azure;
+    border: 1px solid black;
+    margin: 5px 5px;
+    overflow: auto;
+}
+
+.menu-box {
+    position: relative;
+    background-color: khaki;
+    border: 1px solid black;
+    margin: 2px 2px;
+}
+
+.row {
+    width: 100%;
+}
+
+div[ui-sref]:hover {
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
