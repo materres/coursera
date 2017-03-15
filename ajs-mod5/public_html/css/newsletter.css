@@ -1,0 +1,24 @@
+.legend-title {
+    color: white;
+}
+
+.form-content input {
+    color: black;
+}
+
+.form-content span {
+    color: white;
+}
+
+.form-content div {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.ng-touched.ng-valid {
+  border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 2px red solid;
+}

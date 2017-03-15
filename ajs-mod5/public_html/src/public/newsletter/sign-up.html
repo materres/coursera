@@ -1,0 +1,54 @@
+<div class="container">
+    <fieldset>
+        <legend class="legend-title">Registration</legend>
+        <form name="regForm" class="form-content" novalidate>
+            <div>
+                <input type="text" name="firstname" placeholder="First name" ng-model="signUpCtrl.user.first_name" required minlength="2">
+                <span ng-if="(regForm.firstname.$error.minlength || regForm.firstname.$error.required) && regForm.firstname.$touched">
+                    First name is required.
+                </span>
+            </div>
+            
+            <div>
+                <input type="text" name="lastname" placeholder="Last name" ng-model="signUpCtrl.user.last_name" required minlength="2">
+                <span ng-if="(regForm.lastname.$error.minlength || regForm.lastname.$error.required) && regForm.lastname.$touched">
+                    Last name is required.
+                </span>
+            </div>
+            
+            <div>
+                <input type="email" name="email" placeholder="E-mail" ng-model="signUpCtrl.user.email" required>
+                <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+                    Must be a valid email address: name@domain format
+                </span>
+            </div>
+                
+            <div>
+                <input type="text" name="phone" ng-model="signUpCtrl.user.phone" placeholder="Phone ###-###-####" pattern="(\d{3})-(\d{3})-(\d{4})">
+                <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+                    Phone must be in format ###-###-####
+                </span>
+            </div>
+            
+            <div>
+                <input type="text" name="menu" ng-model="signUpCtrl.user.menu_number" placeholder="Menu number" required menu-number>
+                <span ng-show="regForm.menu.$pending.menuNumber">
+                    Checking if this menu number exists...
+                </span>
+                <span ng-show="regForm.menu.$error.menuNumber">
+                    This menu number does not exist.
+                </span>
+            </div>
+            
+            <button ng-disabled="regForm.$invalid || regForm.$pending" ng-click="signUpCtrl.submit()">Submit</button>
+            
+            <span ng-if="signUpCtrl.user.completed && signUpCtrl.user.error">
+                No such menu number exists.
+            </span>
+            <span ng-if="signUpCtrl.user.completed && !signUpCtrl.user.error">
+                Done.
+            </span>
+
+        </form>
+    </fieldset>
+</div>
