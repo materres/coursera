@@ -1,6 +1,8 @@
-<div ng-repeat="category in $ctrl.categories" ui-sref="categories.items({categoryShortName: category.short_name})">
-    <div class="cat-box col-lg-4 col-md-4 col-sm-4">
-        <div>Category Short Name: {{ category.short_name  }} </div>
-        <div>Category Name: {{ category.name  }} </div>
-    </div>
+<div ng-repeat="category in $ctrl.categories">
+    <a ui-sref="categories.items({categoryShortName: category.short_name})">
+        <div class="cat-box col-lg-4 col-md-4 col-sm-4">
+            <p>Category Short Name: {{ category.short_name  }} </p>
+            <div>Category Name: {{ category.name  }} </div>
+        </div>
+    </a>
 </div>

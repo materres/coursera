@@ -1,12 +1,11 @@
 (function () {
     'use strict';
-    
     angular.module('MenuData')
             .service('MenuDataService', MenuDataService)
-            .constant('ApiBasePath', "http://davids-restaurant.herokuapp.com");
+            .constant('ApiBasePath', "https://davids-restaurant.herokuapp.com");
     
-    MenuDataService.$inject = ['$http','$stateParams','ApiBasePath'];
-    function MenuDataService($http, $stateParams, ApiBasePath) {
+    MenuDataService.$inject = ['$http','ApiBasePath'];
+    function MenuDataService($http, ApiBasePath) {
         var mds = this;
         
         mds.getAllCategories = function () {
